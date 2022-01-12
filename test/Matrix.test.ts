@@ -36,4 +36,14 @@ describe('Matrix', () => {
 
 		expect(matrix.data[0][1]).toEqual(tempValue * 5);
 	});
+
+	test('Add Matrix to Matrix', () => {
+		const tempMatrix = new Matrix(1, 2);
+		tempMatrix.rand();
+
+		const tempValue = matrix.data[0][1];
+		matrix.add(tempMatrix);
+
+		expect(matrix.data[0][1]).toEqual(tempValue + tempMatrix.data[0][1]);
+	});
 });

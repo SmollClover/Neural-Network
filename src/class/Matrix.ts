@@ -32,10 +32,18 @@ class Matrix {
 		}
 	}
 
-	public add(n: number): void {
-		for (let i = 0; i < this.rows; i++) {
-			for (let j = 0; j < this.columns; j++) {
-				this.data[i][j] += n;
+	public add(n: number | Matrix): void {
+		if (n instanceof Matrix) {
+			for (let i = 0; i < this.rows; i++) {
+				for (let j = 0; j < this.columns; j++) {
+					this.data[i][j] += n.data[i][j];
+				}
+			}
+		} else {
+			for (let i = 0; i < this.rows; i++) {
+				for (let j = 0; j < this.columns; j++) {
+					this.data[i][j] += n;
+				}
 			}
 		}
 	}
