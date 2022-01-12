@@ -29,7 +29,7 @@ class Matrix {
 	public rand(): void {
 		for (let i = 0; i < this.rows; i++) {
 			for (let j = 0; j < this.columns; j++) {
-				this.data[i][j] = Math.floor(Math.random() * 10);
+				this.data[i][j] = Math.floor(Math.random() * 9) + 1;
 			}
 		}
 	}
