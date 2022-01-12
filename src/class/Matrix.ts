@@ -1,3 +1,5 @@
+import consola from 'consola';
+
 export type MatrixData = Array<Array<number>>;
 
 class Matrix {
@@ -27,7 +29,7 @@ class Matrix {
 	public rand(): void {
 		for (let i = 0; i < this.rows; i++) {
 			for (let j = 0; j < this.columns; j++) {
-				this.data[i][j] = Math.floor(Math.random() * 100);
+				this.data[i][j] = Math.floor(Math.random() * 10);
 			}
 		}
 	}
@@ -48,10 +50,31 @@ class Matrix {
 		}
 	}
 
-	public mult(n: number): void {
-		for (let i = 0; i < this.rows; i++) {
-			for (let j = 0; j < this.columns; j++) {
-				this.data[i][j] *= n;
+	public mult(n: number | Matrix): undefined | Matrix {
+		if (n instanceof Matrix) {
+			if (this.columns !== n.rows) {
+				consola.error('Columns of Matrix A must match Rows of Matrix B!');
+				throw new Error('Matrix not valid for multiplication');
+			}
+
+			const result: Matrix = new Matrix(this.rows, n.columns);
+			for (let i = 0; i < result.rows; i++) {
+				for (let j = 0; j < result.columns; j++) {
+					let sum = 0;
+					for (let k = 0; k < this.columns; k++) {
+						sum += this.data[i][k] * n.data[k][j];
+					}
+
+					result.data[i][j] = sum;
+				}
+			}
+
+			return result;
+		} else {
+			for (let i = 0; i < this.rows; i++) {
+				for (let j = 0; j < this.columns; j++) {
+					this.data[i][j] *= n;
+				}
 			}
 		}
 	}
