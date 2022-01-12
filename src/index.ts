@@ -6,8 +6,8 @@ const b = new Matrix(3, 2);
 a.rand();
 b.rand();
 
-console.log(a.data);
-console.log(b.data);
+console.table(a.data);
+console.table(b.data);
 
 const c = a.mult(b);
-console.log(c?.data);
+console.table(c?.data);
