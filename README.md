@@ -1,46 +1,30 @@
-# Administrator Spider
-## This is the successor of the previous version of Administrator Spider.
+# Neural Network
 
-> This Bot is for the Official Modern Gaming SCP:RP Discord Server.
+## A basic implementation of a Neural Network using TypeScript.
 
----
+### Disclaimer:
 
-<br />
+This Repo is just for some tinkering I am doing on Neural Networks and AI.
 
-### ToDo
- - [ ] Make Bot Public
- - [ ] Finish Trello class
-   - [ ] Add Cache
-   - [ ] Add Public Functions to expore modules API (trello.js)
- - [ ] Copy over previous Bots functions
- - [ ] Make Github Repo better
+### Includes (will include):
 
-<br />
+-   Matrix with Matrix Math functions
+-   Basic class for a Neural Network
+-   Multi-Layer support
+-   Variable number of Input, Output and Hidden Layers
+-   Easy way of exporting and importing data
+    -   Matrix
+    -   Learned Data
+-   A way of continuing learning from last point
 
----
+### ToDo:
 
-<br />
-
-### Setup
-> Make sure to have NodeJS installed
-
-Yarn
-```terminal
-$ yarn install
-$ yarn start
-```
-
-NPM
-```terminal
-$ npm install
-$ npm start
-```
-
-<br />
-
----
-
-<br />
-
-### Note
-This is a private Bot, not intended for public use. If you do want to use it, then good luck, since I will not actively support others.
+-   [ ] Matrix
+    -   [x] Add as class
+    -   [ ] Better way of storing Matrix data
+    -   [ ] Matrix Math functions
+-   [ ] Neural Network
+    -   [ ] Add as class
+    -   [ ] Perceptrons
+    -   [ ] Multi-Layer
+    -   [ ] Variable Inputs, Outputs and Hidden Layers

@@ -783,6 +783,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"consola@npm:^2.15.3":
+  version: 2.15.3
+  resolution: "consola@npm:2.15.3"
+  checksum: 8ef7a09b703ec67ac5c389a372a33b6dc97eda6c9876443a60d76a3076eea0259e7f67a4e54fd5a52f97df73690822d090cf8b7e102b5761348afef7c6d03e28
+  languageName: node
+  linkType: hard
+
 "console-control-strings@npm:^1.0.0, console-control-strings@npm:^1.1.0":
   version: 1.1.0
   resolution: "console-control-strings@npm:1.1.0"
@@ -1858,6 +1865,7 @@ __metadata:
     "@commitlint/cli": ^16.0.0
     "@commitlint/config-angular": ^16.0.0
     "@types/node": ^17.0.5
+    consola: ^2.15.3
     husky: ^7.0.4
     lint-staged: ^12.1.4
     prettier: ^2.5.1

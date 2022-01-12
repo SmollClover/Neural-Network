@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "yarn build && node ./dist/index.js",
-		"test": "ts-node-dev --respawn --transpile-only --poll ./src/index.ts",
+		"dev": "ts-node-dev --respawn --transpile-only --poll ./src/index.ts",
 		"lint": "prettier --write .",
 		"build": "tsc"
 	},
@@ -62,5 +62,8 @@
 				]
 			]
 		}
+	},
+	"dependencies": {
+		"consola": "^2.15.3"
 	}
 }
