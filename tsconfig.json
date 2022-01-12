@@ -13,6 +13,10 @@
 		"skipLibCheck": true,
 		"skipDefaultLibCheck": true,
 		"resolveJsonModule": true,
-		"strict": true
+		"strict": true,
+		"baseUrl": ".",
+		"paths": {
+			"@App/*": ["src/*"]
+		}
 	}
 }
