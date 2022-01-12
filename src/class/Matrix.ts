@@ -18,6 +18,12 @@ class Matrix {
 		}
 	}
 
+	public set(row: number, column: number, n: number): void {
+		if (this.rows < row || this.columns < column) return;
+
+		this.data[row][column] = n;
+	}
+
 	public rand(): void {
 		for (let i = 0; i < this.rows; i++) {
 			for (let j = 0; j < this.columns; j++) {
