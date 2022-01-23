@@ -1,5 +1,3 @@
-import consola from 'consola';
-
 export type MatrixData = Array<Array<number>>;
 
 class MatrixMath {
