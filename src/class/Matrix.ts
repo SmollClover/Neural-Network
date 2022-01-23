@@ -95,6 +95,23 @@ class Matrix {
 			}
 		}
 	}
+
+	public async map(func: Function): Promise<void> {
+		for (let i = 0; i < this.rows; i++) {
+			for (let j = 0; j < this.columns; j++) {
+				const value = this.data[i][j];
+				this.data[i][j] = func(value);
+			}
+		}
+	}
+
+	public async print(pretty: boolean = true): Promise<void> {
+		if (pretty) {
+			console.table(this.data);
+		} else {
+			console.log(this.data);
+		}
+	}
 }
 
 export { Matrix, MatrixMath };

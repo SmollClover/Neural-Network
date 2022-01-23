@@ -12,14 +12,14 @@ describe('Matrix', () => {
 
 	test('Set Matrix [0][1] to 5', async () => {
 		const matrix = new Matrix(2, 3);
-		matrix.set(0, 1, 5);
+		await matrix.set(0, 1, 5);
 
 		expect(matrix.data[0][1]).toEqual(5);
 	});
 
 	test('Fill Matrix with random values', async () => {
 		const matrix = new Matrix(2, 3);
-		matrix.rand();
+		await matrix.rand();
 
 		expect(matrix.data[0][0]).not.toEqual(0);
 	});
@@ -30,7 +30,7 @@ describe('Matrix', () => {
 			[0, 1, 7],
 			[6, 9, 5],
 		];
-		matrix.add(100);
+		await matrix.add(100);
 
 		expect(matrix.data).toEqual([
 			[100, 101, 107],
@@ -38,13 +38,13 @@ describe('Matrix', () => {
 		]);
 	});
 
-	test('multiplyiply Matrix [0][1] by 5', async () => {
+	test('Multiply Matrix [0][1] by 5', async () => {
 		const matrix = new Matrix(2, 3);
 		matrix.data = [
 			[7, 9, 9],
 			[5, 6, 5],
 		];
-		matrix.multiply(5);
+		await matrix.multiply(5);
 
 		expect(matrix.data).toEqual([
 			[35, 45, 45],
@@ -103,6 +103,22 @@ describe('Matrix', () => {
 			[5, 1],
 			[6, 3],
 			[9, 4],
+		]);
+	});
+
+	test('Matrix Map Function', async () => {
+		const a = new Matrix(2, 3);
+		a.data = [
+			[6, 2, 6],
+			[5, 6, 5],
+		];
+		await a.map((x: number) => {
+			return x * 2;
+		});
+
+		expect(a.data).toEqual([
+			[12, 4, 12],
+			[10, 12, 10],
 		]);
 	});
 });
