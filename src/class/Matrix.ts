@@ -49,8 +49,8 @@ class MatrixMath {
 }
 
 class Matrix {
-	public rows: number;
-	public columns: number;
+	readonly rows: number;
+	readonly columns: number;
 	public data: MatrixData;
 
 	public constructor(rows: number, columns: number) {
