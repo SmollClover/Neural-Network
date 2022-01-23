@@ -19,10 +19,10 @@ This Repo is just for some tinkering I am doing on Neural Networks and AI.
 
 ### ToDo:
 
--   [ ] Matrix
+-   [x] Matrix
     -   [x] Add as class
-    -   [ ] Better way of storing Matrix data
-    -   [ ] Matrix Math functions
+    -   [x] Matrix Math functions
+    -   [x] Add Tests
 -   [ ] Neural Network
     -   [ ] Add as class
     -   [ ] Perceptrons
